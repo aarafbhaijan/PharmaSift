@@ -8,7 +8,9 @@ import SearchResults from "../SearchResults/SearchResults";
 const CompareMed = () => {
   const [medSearch, setMedSearch] = useState("");
   const [medData, setMedData] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
 
   // Medicine genrator BackendApicall function (simulator function) 
   const getMedicine=(med)=>{
@@ -42,12 +44,17 @@ const CompareMed = () => {
   }
 
   const fetchMedicine=async ()=>{
-    try{const data=await getMedicine(medSearch);
+    try{setLoading(true)
+      setMedData({})
+      const data=await getMedicine(medSearch);
     console.log(data);
     setMedData(data)
     setLoading(false)
   }catch(error){
-      console.error(error);
+      setIsError(true)
+      // console.error(error);
+    }finally{
+      setLoading(false)
     }
   }
   useEffect(()=>{

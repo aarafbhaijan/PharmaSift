@@ -29,7 +29,7 @@ function App() {
         <Header />
         <Container maxWidth={'xl'}>
         <Routes>
-          <Route element={<Home />} path="/" />
+          <Route element={<Home />} path="/"/>
           <Route element={<SharePrisc />} path="/shareprisc" />
           <Route element={<CompareMed/>} path="/compare" />
           <Route element={<SignIn />} path="/signin" />
