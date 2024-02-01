@@ -12,7 +12,7 @@ const CompareMed = () => {
   const [isError, setIsError] = useState(false);
 
 
-  // Medicine genrator BackendApicall function (simulator function) 
+ // // Medicine genrator BackendApicall function (simulator function) 
   const getMedicine=(med)=>{
     return new Promise((res,rej)=>{
       setTimeout(()=>{
