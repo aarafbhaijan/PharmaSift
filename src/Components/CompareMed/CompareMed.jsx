@@ -11,55 +11,53 @@ const CompareMed = () => {
   const [loading, setLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-
- // // Medicine genrator BackendApicall function (simulator function) 
-  const getMedicine=(med)=>{
-    return new Promise((res,rej)=>{
-      setTimeout(()=>{
+  // // Medicine genrator BackendApicall function (simulator function)
+  const getMedicine = (med) => {
+    return new Promise((res, rej) => {
+      setTimeout(() => {
         const medicine = {
           name: med,
           phar1: {
             pharmacyName: "A",
             price: 500,
-            type:'capsules',
-            quantity:'10 Tabs/Strips',
-            priscription:1,
-            buy:false
-
+            type: "capsules",
+            quantity: "10 Tabs/Strips",
+            priscription: 1,
+            buy: false,
           },
           phar2: {
             pharmacyName: "B",
             price: 200,
-            type:'capsules',
-            quantity:'10 Tabs/Strips',
-            priscription:0,
-            buy:true
+            type: "capsules",
+            quantity: "10 Tabs/Strips",
+            priscription: 0,
+            buy: true,
           },
-          
         };
-        res(medicine)
-        rej('Something Went Wrong')
-      },3000)
-    })
-  }
+        res(medicine);
+        rej("Something Went Wrong");
+      }, 3000);
+    });
+  };
 
-  const fetchMedicine=async ()=>{
-    try{setLoading(true)
-      setMedData({})
-      const data=await getMedicine(medSearch);
-    console.log(data);
-    setMedData(data)
-    setLoading(false)
-  }catch(error){
-      setIsError(true)
+  const fetchMedicine = async () => {
+    try {
+      setLoading(true);
+      setMedData({});
+      const data = await getMedicine(medSearch);
+      // console.log(data);
+      setMedData(data);
+      setLoading(false);
+    } catch (error) {
+      setIsError(true);
       // console.error(error);
-    }finally{
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
-  }
-  useEffect(()=>{
-    fetchMedicine()
-  },[])
+  };
+  useEffect(() => {
+    fetchMedicine();
+  }, []);
   return (
     <div className=" flex w-full  justify-center items-center min-h-lvh ">
       <div className=" md:w-[400px] min-w-[30%] md:min-h-[60%] min-h-[100vh]  py-8 rounded-xl">
@@ -74,10 +72,9 @@ const CompareMed = () => {
           <form
             action=""
             onSubmit={(e) => {
-              setLoading(false)
               e.preventDefault();
-              fetchMedicine()
-              setMedSearch('')
+              fetchMedicine();
+              setMedSearch("");
             }}
           >
             <div>
@@ -102,7 +99,7 @@ const CompareMed = () => {
             </div>
           </form>
           <div>
-            <SearchResults className=''  data={medData} loading={loading}/>
+            <SearchResults className="" data={medData} loading={loading} />
           </div>
         </div>
       </div>

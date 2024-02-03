@@ -20,23 +20,20 @@ import CompareMed from "./Components/CompareMed/CompareMed";
 import Footer from "./Components/Footer.jsx/Footer";
 import SignUp from "./Components/SignUp/SignUp";
 
-
 function App() {
   const [hamCurr, setHamCurr] = useState(false);
   return (
     <>
       <div className="scroll-smooth box-border font-[Montserrat] w-screen  min-h-lvh  bg-gradient-to-t from-green-200 to-sky-200">
         <Header />
-        <Container maxWidth={'xl'}>
-        <Routes>
-          <Route element={<Home />} path="/"/>
-          <Route element={<SharePrisc />} path="/shareprisc" />
-          <Route element={<CompareMed/>} path="/compare" />
-          <Route element={<SignIn />} path="/signin" />
-          <Route element={<SignUp />} path="/signup" />
-
-        </Routes>
-        
+        <Container maxWidth={"xl"}>
+          <Routes>
+            <Route element={<Home />} path="/" />
+            <Route element={<SharePrisc />} path="/shareprisc" />
+            <Route element={<CompareMed />} path="/compare" />
+            <Route element={<SignIn />} path="/signin" />
+            <Route element={<SignUp />} path="/signup" />
+          </Routes>
         </Container>
         <Footer />
       </div>

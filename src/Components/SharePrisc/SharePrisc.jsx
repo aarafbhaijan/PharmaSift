@@ -13,16 +13,16 @@ const SharePrisc = () => {
         <h2 className="py-[0.5%]  xl:text-8xl text-[2rem] sm:justify-self-normal justify-self-center md:text-6xl">
           Share Your Prescription with the Doctor
         </h2>
-        <p className="py-[0.5%]  xl:text-4xl text-[1rem]  md:text-3xl text-[#0086B6]">
+        {/* <p className="py-[0.5%]  xl:text-4xl text-[1rem]  md:text-3xl text-[#0086B6]">
           Welcome to our healthcare platform! If you have a prescription that
           you'd like our experienced doctors to review, you can easily share it
           with us for personalized advice. Your health and well-being are our
           top priorities.
-        </p>
-        <p className="py-[0.5%] xl:text-3xl font-bold text-[1rem]  md:text-2xl text-[black]">
+        </p> */}
+        <p className="py-[0.5%]  xl:text-4xl text-[1rem]  md:text-3xl text-[#0086B6]">
           To share your prescription, please follow these steps:
         </p>
-        <ol className="py-[0.5%]  xl:text-2xl text-[0.6rem]  md:text-xl text-[#0086B6]  ">
+        <ol className="py-[0.5%] xl:text-2xl font-light text-[0.9rem] md:text-2xl text-[black] ">
           <li>Ensure your prescription document is clear and readable.</li>
           <li>Click the "Share Prescription" button below.</li>
           <li>Upload your prescription document.</li>

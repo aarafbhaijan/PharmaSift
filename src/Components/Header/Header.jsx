@@ -4,10 +4,27 @@ import { Button, Container } from "@mui/material";
 import logo from "../../pngLogo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
-import { NavLink, Link, BrowserRouter as Router } from "react-router-dom";
+import {
+  NavLink,
+  Link,
+  BrowserRouter as Router,
+  useLocation,
+} from "react-router-dom";
 import { useState } from "react";
 
 function Header() {
+  const { pathname } = useLocation();
+  // console.log(pathname);
+  // let currPath = pathname.split("/")?.[1];
+  // console.log(currPath);
+  const getCurrLinks = (type = null) => {
+    let normalClass = " hover:text-gray-400 cursor-pointer ";
+    if (type === pathname) {
+      normalClass += "text-[#0086B6] font-semibold";
+    }
+    return normalClass;
+  };
+
   const [hamCurr, setHamCurr] = useState(false);
   return (
     <>
@@ -15,7 +32,7 @@ function Header() {
         className={`h-20 py-20  font-light bg-white sm:h-10 shadow-inner `}
       >
         <Container maxWidth={"xl"}>
-          <nav className="flex justify-between ">
+          <nav className="flex justify-between">
             <div className=" flex items-center justify-center z-50">
               <img src={logo} className="w-14" alt="logo" />
               <h1 className="xl:text-2xl text-lg font-semibold uppercase text-[] ">
@@ -42,7 +59,7 @@ function Header() {
                 <Link
                   onClick={() => setHamCurr(false)}
                   to={"/"}
-                  className="hover:text-gray-400 cursor-pointer"
+                  className={getCurrLinks("/")}
                 >
                   {""}
                   Home
@@ -51,7 +68,7 @@ function Header() {
                 <Link
                   onClick={() => setHamCurr(false)}
                   to={"/compare"}
-                  className="hover:text-gray-400 cursor-pointer"
+                  className={getCurrLinks("/compare")}
                 >
                   {" "}
                   Compare Medicine
@@ -59,25 +76,31 @@ function Header() {
                 <Link
                   onClick={() => setHamCurr(false)}
                   to={"/shareprisc"}
-                  className="hover:text-gray-400 cursor-pointer"
+                  className={getCurrLinks("/shareprisc")}
                 >
                   {" "}
                   Share Prescription
                 </Link>
-                
-                  <Link to={"/signin"}><button
-                  onClick={() => setHamCurr(false)}
-                  class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea] py-3 px-6 font-[Montserrat] text-sm font-bold uppercase text-white shadow-md shadow-[#bdc4c6] transition-all hover:shadow-lg hover:shadow-[#b1ccd6] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                  data-ripple-light="true"
-                >sign In</button></Link>
-                
-                
-                  <Link to={"/signup"}><button
-                  onClick={() => setHamCurr(false)}
-                  class="middle  none center mr-3 rounded-lg border border-[#0086B6] py-3 px-6 font-[Montserrat] text-xs md:text-sm font-bold uppercase text-[#0086B6] transition-all hover:opacity-75 focus:ring focus:ring-pink-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none "
-                  data-ripple-dark="true"
-                >Sign Up</button></Link>
-                
+
+                <Link to={"/signin"}>
+                  <button
+                    onClick={() => setHamCurr(false)}
+                    class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea] py-3 px-6 font-[Montserrat] text-sm font-bold uppercase text-white shadow-md shadow-[#bdc4c6] transition-all hover:shadow-lg hover:shadow-[#b1ccd6] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    data-ripple-light="true"
+                  >
+                    sign In
+                  </button>
+                </Link>
+
+                <Link to={"/signup"}>
+                  <button
+                    onClick={() => setHamCurr(false)}
+                    class="middle  none center mr-3 rounded-lg border border-[#0086B6] py-3 px-6 font-[Montserrat] text-xs md:text-sm font-bold uppercase text-[#0086B6] transition-all hover:opacity-75 focus:ring focus:ring-pink-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none "
+                    data-ripple-dark="true"
+                  >
+                    Sign Up
+                  </button>
+                </Link>
               </div>
               <div
                 className="my-9 self-center cursor-pointer z-10 absolute top-12 right-10 text-2xl xl:hidden"
