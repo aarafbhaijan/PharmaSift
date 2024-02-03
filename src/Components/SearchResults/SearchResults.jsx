@@ -19,7 +19,7 @@ const SearchResults = ({ data, loading}) => {
     data.name && (
       
       <>
-        <div className="h-3/4 py-6 text-center flex flex-col items-center ">
+        <div className="h-3/4 py-6 text-center flex flex-col items-center">
           <div className="">
             <h1 className="text-xl text-bold">
               <b>Compare Prices</b> of<b> Government Medicines </b>&{" "}

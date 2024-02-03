@@ -12,7 +12,7 @@ import img5 from "./img5.jpg";
 
 const MyCarousel = () => {
   return (
-    <div className="xl:w-[100%] w-[100%] h-fit justify-self-center">
+    <div className=" max-w-screen-sm mx-auto  xl:w-[100%] w-[100%] h-fit justify-self-center">
       <Carousel
         className=' self-center rounded-xl  '
         autoPlay

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const SingleCard = ({ data, compare}) => {
   console.log(compare.buyTo);
   return (
-    <div className={data.buy? `cursor-pointer hover:translate-x-2 hover:scale-[1.02]  transition relative my-6  flex w-500px  max-w-[20rem] flex-col rounded-xl bg-gradient-to-tr from-[#0086B6] to-[#6cc6e5] bg-clip-border p-8 text-white shadow-md shadow-pink-500/40`:` cursor-pointer hover:scale-[1.02] hover:translate-x-[-0.5rem] transition relative my-6  flex w-500px  max-w-[20rem] flex-col rounded-xl bg-gradient-to-tr from-[#f55151] to-[#f59c69] bg-clip-border p-8 text-white shadow-md shadow-pink-500/40`}>
+    <div className={data.buy? `cursor-pointer hover:translate-x-2 hover:scale-[1.02]  transition relative my-6  flex w-500px  max-w-[20rem] flex-col rounded-xl bg-gradient-to-tr from-[#0086B6] to-[#6cc6e5] bg-clip-border p-8 text-white shadow-md shadow-pink-500/40`:` cursor-pointer hover:scale-[1.02] hover:translate-x-[-0.5rem] transition relative my-6  flex w-500px  max-w-[20rem] flex-col rounded-xl bg-gradient-to-tr from-[#f55151] to-[#f59c69] bg-clip-border p-8 text-white shadow-md shadow-pink-500/40 `}>
       <div class="relative m-0 mb-8 overflow-hidden rounded-none border-b border-white/10 bg-transparent bg-clip-border pb-8 text-center text-gray-700 shadow-none">
         <p class="block font-sans text-sm font-normal uppercase leading-normal text-white antialiased">
           Pharmacy Name: {""}{" "}

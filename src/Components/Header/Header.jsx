@@ -62,7 +62,7 @@ function Header() {
                   className="hover:text-gray-400 cursor-pointer"
                 >
                   {" "}
-                  Share Priscription
+                  Share Prescription
                 </Link>
                 
                   <Link to={"/signin"}><button

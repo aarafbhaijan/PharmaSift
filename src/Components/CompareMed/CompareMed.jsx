@@ -74,6 +74,7 @@ const CompareMed = () => {
           <form
             action=""
             onSubmit={(e) => {
+              setLoading(false)
               e.preventDefault();
               fetchMedicine()
               setMedSearch('')
