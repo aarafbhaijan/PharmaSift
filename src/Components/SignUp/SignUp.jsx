@@ -9,7 +9,7 @@ const SignUp = () => {
     >
       <div class=" relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border min-h-[45vh] justify-center ">
         <div class="relative grid mx-4 mb-4 -mt-6  overflow-hidden  h-28 place-items-center  bg-clip-border  shadow-gray-900/20">
-          <h3 class="block  text-3xl antialiased font-bold leading-snug tracking-normal h-[50%] uppercase text-[#0086B6]">
+          <h3 class="block py-5 text-3xl antialiased font-bold leading-snug tracking-normal h-[50%] uppercase text-[#0086B6]">
             Sign Up
           </h3>
         </div>
