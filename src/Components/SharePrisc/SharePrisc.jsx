@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { FaCheckCircle } from "react-icons/fa";
 const SharePrisc = () => {
   const dr_PhoneNum = "9082871677";
   const message = "Prescription to be checked..";
@@ -23,10 +23,20 @@ const SharePrisc = () => {
           To share your prescription, please follow these steps:
         </p>
         <ol className="py-[0.5%] xl:text-2xl font-light text-[0.9rem] md:text-2xl text-[black] ">
-          <li>Ensure your prescription document is clear and readable.</li>
-          <li>Click the "Share Prescription" button below.</li>
-          <li>Upload your prescription document.</li>
           <li>
+            <FaCheckCircle className="inline text-[#0086B6] mr-2" />
+            Ensure your prescription document is clear and readable.
+          </li>
+          <li>
+            <FaCheckCircle className="inline text-[#0086B6] mr-2" />
+            Click the "Share Prescription" button below.
+          </li>
+          <li>
+            <FaCheckCircle className="inline text-[#0086B6] mr-2" />
+            Upload your prescription document.
+          </li>
+          <li>
+            <FaCheckCircle className="inline text-[#0086B6] mr-2" />
             Our doctors will review it and provide personalized recommendations.
           </li>
         </ol>
