@@ -35,7 +35,7 @@ function Header() {
           <nav className="flex justify-between">
             <div className=" flex items-center justify-center z-50">
               <img src={logo} className="w-14" alt="logo" />
-              <h1 className="xl:text-2xl text-lg font-semibold uppercase text-[] ">
+              <h1 className="xl:text-2xl text-lg font-normal uppercase text-[] ">
                 Pharmasift
               </h1>
             </div>

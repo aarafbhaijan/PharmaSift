@@ -74,14 +74,14 @@ const Footer = () => {
           </p>
           <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <a
-              class="ml-3  text-gray-500"
+              class="ml-3  text-gray-500 hover:text-[#0086B6] transition"
               href="https://github.com/aarafbhaijan"
               target="_blank"
             >
               <FaGithub className="scale-150" />
             </a>
             <a
-              class="ml-3 text-gray-500"
+              class="ml-3 text-gray-500 hover:text-[#0086B6] transition"
               target="_blank"
               href="https://www.instagram.com/aaraf_aly/"
             >
@@ -99,7 +99,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              class="ml-3 text-gray-500"
+              class="ml-3 text-gray-500 hover:text-[#0086B6] transition"
               href="https://www.linkedin.com/in/aaraf-ali-277588297/"
               target="_black"
             >
@@ -109,7 +109,7 @@ const Footer = () => {
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="0"
-                class="w-5 h-5"
+                class="w-5 h-5 "
                 viewBox="0 0 24 24"
               >
                 <path
