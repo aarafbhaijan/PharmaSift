@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
+import shareImg from ".//myPresc.png";
 const SharePrisc = () => {
   const dr_PhoneNum = "9082871677";
   const message = "Prescription to be checked..";
@@ -8,7 +9,7 @@ const SharePrisc = () => {
     message
   )}`;
   return (
-    <div className=" min-h-[80vh] flex justify-center flex-col gap-4">
+    <div className="my-5 min-h-[80vh] flex md:flex-row flex-col-reverse  items-center justify-center gap-4 ">
       <div>
         <h2 className="py-[0.5%]  xl:text-8xl text-[2rem] sm:justify-self-normal justify-self-center md:text-6xl">
           Share Your Prescription with the Doctor
@@ -40,16 +41,20 @@ const SharePrisc = () => {
             Our doctors will review it and provide personalized recommendations.
           </li>
         </ol>
+        <div>
+          <Link to={whatsappLink} target="_blank">
+            <button
+              class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea]  py-3 px-6 font-[Montserrat] md:text-xl text-sm font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-[#b1ccd6] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              data-ripple-light="true"
+            >
+              Share Prescription
+            </button>
+          </Link>
+        </div>
       </div>
+
       <div>
-        <Link to={whatsappLink} target="_blank">
-          <button
-            class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea]  py-3 px-6 font-[Montserrat] md:text-xl text-sm font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-[#b1ccd6] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-            data-ripple-light="true"
-          >
-            Share Prescription
-          </button>
-        </Link>
+        <img src={shareImg} alt="prescription" className=" rounded-[50%]" />
       </div>
     </div>
   );
