@@ -4,6 +4,7 @@ import { Button } from "@mui/material";
 import { IoSearch } from "react-icons/io5";
 import MyCarousel from "../Home/MyCarousel";
 import SearchResults from "../SearchResults/SearchResults";
+import CompareImg from "./CompareImg.jpg";
 
 const CompareMed = () => {
   const [medSearch, setMedSearch] = useState("");
@@ -59,7 +60,10 @@ const CompareMed = () => {
     fetchMedicine();
   }, []);
   return (
-    <div className=" flex w-full  justify-center items-center min-h-lvh ">
+    <div className=" flex w-full flex-col md:flex-row justify-evenly items-center min-h-lvh ">
+      <div className="m-4 ">
+        <img src={CompareImg} alt="" className="rounded-3xl" />
+      </div>
       <div className=" md:w-[400px] min-w-[30%] md:min-h-[60%] min-h-[100vh]  py-8 rounded-xl">
         <div className="text-center text-5xl  p-5font-bold text-[#0086B6]">
           Get Your Medicine Done!{" "}
@@ -78,11 +82,14 @@ const CompareMed = () => {
             }}
           >
             <div>
+              <label htmlFor="search" className="text-[#0086B6] font-bold">
+                Search
+              </label>
               <input
                 type="text"
                 value={medSearch}
                 onChange={(e) => setMedSearch(e.target.value)}
-                name=""
+                name="seach"
                 placeholder="Enter It Here..."
                 id=""
                 className="max-w-[80%] my-10 mx-2 px-4 h-10 text-xl focus:outline-none focus:text-[#0086B6] font-light focus:font-bold focus:border-[#0086B6]  focus:border-b-4 text-center "

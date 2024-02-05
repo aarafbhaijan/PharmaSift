@@ -2,12 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
 import shareImg from ".//myPresc.png";
+import Modal from "./Modal";
 const SharePrisc = () => {
-  const dr_PhoneNum = "9082871677";
-  const message = "Prescription to be checked..";
-  const whatsappLink = `https://wa.me/${dr_PhoneNum}?text=${encodeURIComponent(
-    message
-  )}`;
+  
   return (
     <div className="my-5 min-h-[80vh] flex md:flex-row flex-col-reverse  items-center justify-center gap-4 ">
       <div>
@@ -37,19 +34,12 @@ const SharePrisc = () => {
             Upload your prescription document.
           </li>
           <li>
-            <FaCheckCircle className="inline text-[#0086B6] mr-2" />
+            <FaCheckCircle className=" inline text-[#0086B6] mr-2" />
             Our doctors will review it and provide personalized recommendations.
           </li>
         </ol>
         <div>
-          <Link to={whatsappLink} target="_blank">
-            <button
-              class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea]  py-3 px-6 font-[Montserrat] md:text-xl text-sm font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-[#b1ccd6] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              data-ripple-light="true"
-            >
-              Share Prescription
-            </button>
-          </Link>
+          <Modal />
         </div>
       </div>
 

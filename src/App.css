@@ -1,8 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "react-alice-carousel/lib/alice-carousel.css";
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
+body {
+  overflow-y: scroll; /* Enable vertical scrolling on the body */
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+scrollbar-width{
+  display: none;
+}
