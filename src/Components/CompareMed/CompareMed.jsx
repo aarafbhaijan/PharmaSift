@@ -82,9 +82,6 @@ const CompareMed = () => {
             }}
           >
             <div>
-              <label htmlFor="search" className="text-[#0086B6] font-bold">
-                Search
-              </label>
               <input
                 type="text"
                 value={medSearch}
