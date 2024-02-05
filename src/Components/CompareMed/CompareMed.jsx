@@ -60,9 +60,9 @@ const CompareMed = () => {
     fetchMedicine();
   }, []);
   return (
-    <div className=" flex max-w-full flex-col md:flex-row justify-evenly items-center min-h-lvh ">
+    <div className=" flex max-w-full flex-col  justify-evenly items-center min-h-lvh ">
       <div className="m-4 ">
-        <img src={CompareImg} alt="" className="rounded-3xl" />
+        <img src={CompareImg} alt="" className="rounded-3xl " />
       </div>
       <div className=" md:w-[400px] min-w-[30%] md:min-h-[60%] min-h-[100vh]  py-8 rounded-xl">
         <div className="text-center text-5xl  p-5font-bold text-[#0086B6]">
@@ -81,7 +81,7 @@ const CompareMed = () => {
               setMedSearch("");
             }}
           >
-            <div>
+            <div className="">
               <input
                 type="text"
                 value={medSearch}
