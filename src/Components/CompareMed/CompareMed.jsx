@@ -60,7 +60,7 @@ const CompareMed = () => {
     fetchMedicine();
   }, []);
   return (
-    <div className=" flex w-full flex-col md:flex-row justify-evenly items-center min-h-lvh ">
+    <div className=" flex max-w-full flex-col md:flex-row justify-evenly items-center min-h-lvh ">
       <div className="m-4 ">
         <img src={CompareImg} alt="" className="rounded-3xl" />
       </div>

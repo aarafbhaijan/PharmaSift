@@ -26,7 +26,7 @@ const MyCarousel = ({ img6, img7, img8, img9, img10, steps }) => {
         showIndicators
         showStatus={false}
         width={"80%"}
-        interval={1000}
+        interval={2500}
         showThumbs={false}
         transitionTime={1}
         // stopOnHover={true}

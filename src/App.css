@@ -9,11 +9,15 @@ html {
 body {
   overflow-y: scroll; /* Enable vertical scrolling on the body */
 }
+
+body {
+  overflow-x: hidden; /* Enable vertical scrolling on the body */
+}
 ::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for Firefox */
-scrollbar-width{
+scrollbar-width {
   display: none;
 }

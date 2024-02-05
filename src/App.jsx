@@ -35,7 +35,7 @@ function App() {
             <Route element={<SignUp />} path="/signup" />
           </Routes>
         </Container>
-        <Footer />
+        <Footer className="fixed bottom-0 right-0 left-0" />
       </div>
     </>
   );
