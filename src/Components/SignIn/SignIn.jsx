@@ -5,7 +5,7 @@ const SignIn = () => {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
-      className="min-h-[80vh] my-5 font-[Montserrat] w-full flex items-center justify-center"
+      className="min-h-[60vh] my-5 font-[Montserrat] w-full flex items-center justify-center"
     >
       <div class=" relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border min-h-[45vh] justify-center ">
         <div class="relative grid mx-4 mb-4 -mt-6  overflow-hidden  h-28 place-items-center  bg-clip-border  shadow-gray-900/20">

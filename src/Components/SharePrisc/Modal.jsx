@@ -50,7 +50,7 @@ export default function TransitionsModal() {
   return (
     <div>
       <button
-        class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea]  py-3 px-6 font-[Montserrat] md:text-xl text-sm font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-[#424a4d] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea]  py-3 px-6 font-[Montserrat] md:text-xl text-sm font-light   text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-[#424a4d] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         data-ripple-light="true"
         onClick={handleOpen}
       >
@@ -74,7 +74,7 @@ export default function TransitionsModal() {
         <Fade in={open}>
           <Box
             sx={style}
-            className="bg-gradient-to-t from-green-200 to-sky-200 h-[80%] w-[80%] flex flex-col overflow-scroll  scroll-m-0 scroll-smooth"
+            className="bg-gradient-to-t border-none from-green-200 to-sky-200 h-[80%] w-[80%] flex flex-col overflow-scroll  scroll-m-0 scroll-smooth"
           >
             <div className="flex  flex-col md:flex-row gap-6">
               <MyCarousel
@@ -114,8 +114,8 @@ export default function TransitionsModal() {
             </div>
             <div className="m-auto justify-self-center py-4">
               <Link to={whatsappLink} target="_blank">
-                <button class="group relative h-12 w-48 overflow-hidden rounded-2xl bg-green-500 text-lg font-normal text-white">
-                  <FaWhatsapp className="inline h-8 " /> Share It
+                <button class="group font-[Montserrat]  relative h-12 w-48 overflow-hidden rounded-2xl bg-green-500 text-lg font-normal text-white">
+                  <FaWhatsapp className="inline h-8  tracking-wide" /> Share It
                   <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
                 </button>
               </Link>

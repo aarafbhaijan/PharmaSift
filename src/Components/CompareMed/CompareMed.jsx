@@ -12,7 +12,7 @@ const CompareMed = () => {
   const [loading, setLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  // // Medicine genrator BackendApicall function (simulator function)
+  // // Medicine data genrator (BackendApicall function or simulator function)
   const getMedicine = (med) => {
     return new Promise((res, rej) => {
       setTimeout(() => {
@@ -36,7 +36,7 @@ const CompareMed = () => {
           },
         };
         res(medicine);
-        rej("Something Went Wrong");
+        rej("Page Not Found");
       }, 3000);
     });
   };
@@ -62,9 +62,9 @@ const CompareMed = () => {
   return (
     <div className=" flex max-w-full flex-col  justify-evenly items-center min-h-lvh ">
       <div className="m-4 ">
-        <img src={CompareImg} alt="" className="rounded-3xl " />
+        <img src={CompareImg} alt="" className="rounded-[50%]" />
       </div>
-      <div className=" md:w-[400px] min-w-[30%] md:min-h-[60%] min-h-[100vh]  py-8 rounded-xl">
+      <div className=" md:w-[400px] min-w-[30%] md:min-h-[60%] min-h-[100vh] py-8 rounded-xl">
         <div className="text-center text-5xl  p-5font-bold text-[#0086B6]">
           Get Your Medicine Done!{" "}
         </div>
@@ -93,7 +93,7 @@ const CompareMed = () => {
               />
               <div>
                 <button
-                  class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea]  py-3 px-6 font-[Montserrat] md:text-xl text-sm font-bold  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-[#b1ccd6] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea]  py-3 px-6 font-[Montserrat] md:text-xl text-sm font-light  text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-[#424a4d] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   data-ripple-dark="true"
                   type="submit"
                 >

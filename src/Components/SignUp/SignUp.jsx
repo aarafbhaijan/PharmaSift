@@ -5,7 +5,7 @@ const SignUp = () => {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
-      className="min-h-[80vh] font-[Montserrat] w-full my-5 flex items-center justify-center"
+      className="min-h-[60vh] font-[Montserrat] w-full my-5 flex items-center justify-center"
     >
       <div class=" relative flex flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border min-h-[45vh] justify-center ">
         <div class="relative grid mx-4 mb-4 -mt-6  overflow-hidden  h-28 place-items-center  bg-clip-border  shadow-gray-900/20">
@@ -54,7 +54,6 @@ const SignUp = () => {
               Confirm Password
             </label>
           </div>
-          
         </div>
         <div class="p-6 pt-0">
           <button
@@ -67,10 +66,10 @@ const SignUp = () => {
             Already have an account?
             <Link to={"/signin"}>
               <button
-                class="middle none center mr-3 rounded-lg border border-[#0086B6] py-3 px-6 font-[Montserrat] text-xs font-bold uppercase text-[#0086B6] transition-all hover:opacity-75 focus:ring focus:ring-pink-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-6 "
-                data-ripple-dark="true"
+                class={`mx-2 middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea] py-3 px-6 font-[Montserrat] text-sm font-light uppercase text-white shadow-md shadow-[#bdc4c6] transition-all hover:shadow-lg hover:shadow-[#424a4d] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none`}
+                data-ripple-light="true"
               >
-                Sign In
+                sign In
               </button>
             </Link>
           </p>

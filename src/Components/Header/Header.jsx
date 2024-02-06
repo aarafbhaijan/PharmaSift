@@ -4,12 +4,7 @@ import { Button, Container } from "@mui/material";
 import logo from "../../pngLogo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
-import {
-  NavLink,
-  Link,
-  BrowserRouter as Router,
-  useLocation,
-} from "react-router-dom";
+import { Link, BrowserRouter as Router, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 function Header() {
@@ -85,7 +80,7 @@ function Header() {
                 <Link to={"/signin"}>
                   <button
                     onClick={() => setHamCurr(false)}
-                    class="middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea] py-3 px-6 font-[Montserrat] text-sm font-bold uppercase text-white shadow-md shadow-[#bdc4c6] transition-all hover:shadow-lg hover:shadow-[#b1ccd6] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    class={`middle none center mr-3 rounded-lg bg-gradient-to-tr from-[#0086B6] to-[#a8d9ea] py-3 px-6 font-[Montserrat] text-sm font-light uppercase text-white shadow-md shadow-[#bdc4c6] transition-all hover:shadow-lg hover:shadow-[#424a4d] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none`}
                     data-ripple-light="true"
                   >
                     sign In

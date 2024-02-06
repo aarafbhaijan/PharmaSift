@@ -44,7 +44,7 @@ const SharePrisc = () => {
       </div>
 
       <div>
-        <img src={shareImg} alt="prescription" className=" rounded-[50%]" />
+        <img src={shareImg} alt="prescription" className="rounded-[50%]" />
       </div>
     </div>
   );
